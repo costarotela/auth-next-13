@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const MONGO_URL = "mongodb://127.0.0.1/auth-next-13-yt";
+const MONGO_URL = "mongodb+srv://pcostarotela:hvzGCWObjE2oPqGb@cluster0.lokzhpm.mongodb.net/";
+//const MONGO_URL = "mongodb://127.0.0.1/auth-next-13-yt";
 
 export const connectMongoDB = async () => {
   try {
