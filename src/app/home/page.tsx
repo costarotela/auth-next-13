@@ -1,7 +1,10 @@
 import { dateTransform } from '@/utils/dateTransform'
 
 async function getData () {
-  const res = await fetch('http://localhost:3000/api/users')
+  //const res = await fetch('http://localhost:3000/api/users')
+
+  const url_host = process.env.HOST_URL || "http://localhost:3000"
+  const res = await fetch(`${url_host}/api/users`)
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
