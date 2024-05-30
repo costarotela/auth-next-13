@@ -9,7 +9,8 @@ export async function middleware (request: NextRequest) {
       return NextResponse.redirect(new URL('/', request.url))
     }
 
-    const res = await fetch('http://localhost:3000/api/auth/check', {
+    const url_pp = request.nextUrl.origin 
+    const res = await fetch(`${url_pp}/api/auth/check`, {
       headers: {
         token: token.value
       }
