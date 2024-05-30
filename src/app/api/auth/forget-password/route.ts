@@ -5,12 +5,8 @@ import User from "@/models/User";
 import { Resend } from "resend";
 import jwt from "jsonwebtoken";
 import { EmailTemplate } from "@/components/EmailTemplate";
-import dotenv from "dotenv"
 
-dotenv.config()
 
-console.log("variable: " + process.env.RESEND_API)
-//const resend = new Resend("re_cjoG7Y1E_EsF32pPsAAqrdQRH2q2nj1pX");
 const resend = new Resend(process.env.RESEND_API);
 
 export async function POST(request: NextRequest) {
